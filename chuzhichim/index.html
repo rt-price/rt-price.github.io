@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="初智齿mv - 了解智齿萌出的全过程、疼痛原因及应对方法。提供智齿生长阶段示意图、拔牙前后护理指南及相关科普视频解析。">
+    <meta name="keywords" content="初智齿mv, 智齿萌出, 智齿生长过程, 拔牙视频, 牙科科普">
+    <title>初智齿mv - 智齿萌出全过程解析与拔牙科普指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --primary-hover: #0052a3;
+            --accent-color: #ff6b6b;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e0f2ff 0%, #ffffff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: #000;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .play-btn {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .play-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .play-icon {
+            width: 0; 
+            height: 0; 
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 25px solid white;
+            margin-left: 5px;
+        }
+
+        /* Content Grid */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .card-img {
+            height: 200px;
+            background-color: #e9ecef;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .card-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .card-link::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.3s;
+        }
+
+        .card-link:hover::after {
+            margin-left: 10px;
+        }
+
+        /* Stages Section */
+        .stages-container {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+        }
+
+        .stage-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stage-item:last-child {
+            border-bottom: none;
+        }
+
+        .stage-number {
+            background: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .stage-content h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .stage-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        .icon-plus {
+            width: 20px;
+            height: 20px;
+            position: relative;
+        }
+
+        .icon-plus::before, .icon-plus::after {
+            content: '';
+            position: absolute;
+            background: #999;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .icon-plus::before { width: 20px; height: 2px; }
+        .icon-plus::after { width: 2px; height: 20px; }
+
+        .faq-item.active .icon-plus::after {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            color: #95a5a6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .stages-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path>
+                    <path d="M12 6v6l4 2"></path>
+                </svg>
+                初智齿mv<span>科普</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#video" class="active">萌出视频</a></li>
+                    <li><a href="#stages">生长阶段</a></li>
+                    <li><a href="#guide">拔牙指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-button">咨询医生</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero / Video Section -->
+        <section class="hero" id="video">
+            <div class="container">
+                <h1>初智齿萌出全过程解析</h1>
+                <p>通过高清模拟视频，直观了解智齿从骨内萌出到完全长出的关键步骤，以及可能遇到的阻生情况。</p>
+                
+                <div class="video-wrapper">
+                    <!-- 模拟视频播放器界面 -->
+                    <div class="play-btn" onclick="alert('演示：此处将加载智齿萌出3D动画视频。在实际应用中，会嵌入 <iframe> 或 HTML5 视频标签。')">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div style="position: absolute; bottom: 20px; left: 20px; color: white; font-size: 0.9rem;">
+                        <span style="background: rgba(0,0,0,0.6); padding: 2px 6px; border-radius: 4px;">HD</span> 
+                        <span style="background: rgba(0,0,0,0.6); padding: 2px 6px; border-radius: 4px; margin-left: 5px;">MP4</span>
+                    </div>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #888;">点击播放查看智齿生长动画演示</p>
+            </div>
+        </section>
+
+        <!-- Stages Section -->
+        <section class="container" id="stages">
+            <h2 class="section-title">智齿萌出的四个阶段</h2>
+            <div class="stages-container">
+                <div class="stage-item">
+                    <div class="stage-number">1</div>
+                    <div class="stage-content">
+                        <h3>骨内萌出期</h3>
+                        <p>智齿牙冠开始突破牙槽骨的硬组织，这是最关键的阶段。此时患者可能无明显感觉，或仅有轻微胀痛感。</p>
+                    </div>
+                </div>
+                <div class="stage-item">
+                    <div class="stage-number">2</div>
+                    <div class="stage-content">
+                        <h3>龈瓣形成期</h3>
+                        <p>牙龈组织覆盖在部分萌出的牙冠上，形成覆盖智齿的牙龈瓣。如果清洁不到位，此处极易形成盲袋，滋生细菌。</p>
+                    </div>
+                </div>
+                <div class="stage-item">
+                    <div class="stage-number">3</div>
+                    <div class="stage-content">
+                        <h3>部分萌出期</h3>
+                        <p>智齿已经长出牙龈一部分，咬合关系尚未建立。此时牙冠表面容易堆积食物残渣，且难以清洁，容易引发冠周炎。</p>
+                    </div>
+                </div>
+                <div class="stage-item">
+                    <div class="stage-number">4</div>
+                    <div class="stage-content">
+                        <h3>完全萌出期</h3>
+                        <p>智齿完全长出并与对颌牙齿建立咬合。如果位置、方向正常且完全萌出，通常不需要处理。但大多数智齿无法达到此状态。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guides & Articles -->
+        <section class="container" id="guide">
+            <h2 class="section-title">智齿相关护理与指南</h2>
+            <div class="grid-layout">
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/dental1/400/300" alt="智齿冠周炎护理">
+                        <span class="card-badge">护理指南</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">智齿冠周炎怎么办？</h3>
+                        <p class="card-text">详细介绍急性发作期的消炎方法、冲洗上药流程以及日常保持口腔卫生的注意事项。</p>
+                        <a href="#" class="card-link">阅读全文</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/dental2/400/300" alt="拔牙适应症">
+                        <span class="card-badge">科普</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">哪些智齿建议拔除？</h3>
+                        <p class="card-text">解析阻生智齿、位置不正智齿以及反复发炎智齿的拔除指征，帮助判断是否需要手术。</p>
+                        <a href="#" class="card-link">查看标准</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/dental3/400/300" alt="拔牙前后注意事项">
+                        <span class="card-badge">术后恢复</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">拔智齿后的24小时</h3>
+                        <p class="card-text">从止血棉球吐出时间到饮食禁忌，为您提供一份详细的术后恢复时间表。</p>
+                        <a href="#" class="card-link">查看指南</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container" id="faq">
+            <h2 class="section-title">常见问题解答</h2>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        智齿萌出时会痛吗？
+                        <div class="icon-plus"></div>
+                    </div>
+                    <div class="faq-answer">
+                        大多数情况下，智齿萌出过程是无痛或仅有轻微不适的。疼痛通常发生在萌出受阻（阻生智齿）导致牙龈瓣发炎，或者牙冠直接压迫邻近牙齿时。如果出现剧烈疼痛，建议及时就医。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        初智齿萌出需要多久？
+                        <div class="icon-plus"></div>
+                    </div>
+                    <div class="faq-answer">
+                        智齿萌出的速度因人而异，通常需要几个月到两三年的时间。从牙冠突破骨面到完全长出可能需要更长时间，甚至终生处于萌出状态。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        视频里的“初智齿”是什么意思？
+                        <div class="icon-plus"></div>
+                    </div>
+                    <div class="faq-answer">
+                        “初智齿”通常指刚刚开始萌出或处于萌出初期的智齿。在医学影像学中，这通常对应牙冠部分突破骨壁或牙龈覆盖的状态，是评估智齿位置和拔牙难度的关键时期。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        萌出期的智齿需要拍片吗？
+                        <div class="icon-plus"></div>
+                    </div>
+                    <div class="faq-answer">
+                        非常建议拍摄曲面断层片（全景片）或CBCT。这不仅能确认智齿的萌出位置、方向，还能评估牙根发育情况以及与神经管的关系，为后续治疗提供依据。
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem; line-height: 1.8;">
+                        初智齿mv致力于提供最直观、最专业的口腔科普内容。通过3D动画与图文结合的方式，帮助大众正确认识智齿问题。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#video">萌出视频演示</a></li>
+                        <li><a href="#stages">生长阶段图解</a></li>
+                        <li><a href="#guide">拔牙全流程</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关服务</h4>
+                    <ul>
+                        <li><a href="#">在线预约挂号</a></li>
+                        <li><a href="#">口腔健康自测</a></li>
+                        <li><a href="#">医生在线咨询</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 初智齿mv科普平台. 版权所有. 本站内容仅供科普参考，不作为医疗诊断依据。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 手风琴交互
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项目
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项目
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
