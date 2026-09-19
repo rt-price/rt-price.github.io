@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VK服务器提供高性能、高可用的云服务器解决方案，支持Windows与Linux系统，提供DDoS防护、负载均衡及弹性扩容服务，助您构建稳定可靠的IT基础设施。">
+    <meta name="keywords" content="vk服务器, 云服务器, 虚拟主机, VPS, 域名注册, 网站托管, 数据中心">
+    <title>vk服务器-高性能云服务器与稳定网络解决方案</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-hover: #004494;
+            --accent-color: #00d2ff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --border-color: #e1e4e8;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--bg-white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e6e9f0 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 14px 32px;
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .btn-outline:hover {
+            background-color: #f0f4ff;
+        }
+
+        .hero-visual {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .server-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            width: 100%;
+            max-width: 500px;
+            border-top: 5px solid var(--accent-color);
+        }
+
+        .server-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background: var(--bg-light);
+            border-radius: var(--radius-md);
+        }
+
+        .stat-value {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #e6f0fa;
+            color: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background-color: var(--bg-light);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            align-items: start;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            border: 1px solid var(--border-color);
+        }
+
+        .pricing-card.popular {
+            border: 2px solid var(--primary-color);
+            transform: scale(1.05);
+            z-index: 2;
+        }
+
+        .badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 5px;
+        }
+
+        .plan-period {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .plan-features li {
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+        }
+
+        .plan-features li::before {
+            content: "✓";
+            color: #28a745;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .plan-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+            padding: 12px;
+            background-color: white;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .plan-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .pricing-card.popular .plan-btn {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .pricing-card.popular .plan-btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-secondary);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .server-card {
+                width: 100%;
+            }
+
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#0056b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="#0056b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="#0056b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                VK服务器
+            </a>
+            <nav class="nav-links">
+                <a href="#features">产品特性</a>
+                <a href="#pricing">价格方案</a>
+                <a href="#faq">常见问题</a>
+                <a href="#contact">联系我们</a>
+            </nav>
+            <a href="#pricing" class="cta-button">立即购买</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>极速稳定，打造您的云端堡垒</h1>
+                    <p>提供高性能VPS云服务器，采用最新Intel/AMD处理器，千兆带宽接入，支持一键部署，助您轻松应对高并发流量挑战。</p>
+                    <div class="hero-actions">
+                        <a href="#pricing" class="btn-primary">查看价格</a>
+                        <a href="#features" class="btn-outline">了解详情</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="server-card">
+                        <h3 style="margin-bottom: 20px;">服务器状态监控</h3>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                            <span>CPU使用率</span>
+                            <span style="color: #28a745;">12%</span>
+                        </div>
+                        <div style="width: 100%; height: 8px; background: #eee; border-radius: 4px; margin-bottom: 20px;">
+                            <div style="width: 12%; height: 100%; background: #28a745; border-radius: 4px;"></div>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                            <span>内存使用率</span>
+                            <span style="color: #00d2ff;">45%</span>
+                        </div>
+                        <div style="width: 100%; height: 8px; background: #eee; border-radius: 4px; margin-bottom: 20px;">
+                            <div style="width: 45%; height: 100%; background: #00d2ff; border-radius: 4px;"></div>
+                        </div>
+
+                        <div class="server-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">99.9%</span>
+                                <span class="stat-label">在线率</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">10Gbps</span>
+                                <span class="stat-label">峰值带宽</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">为什么选择VK服务器</h2>
+                    <p class="section-desc">我们专注于为企业和开发者提供卓越的云计算体验，从底层硬件到上层软件提供全方位保障。</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3 class="feature-title">极速部署</h3>
+                        <p class="feature-desc">预配置的系统镜像，开机即用。支持Windows Server、CentOS、Ubuntu等多种操作系统，最快1分钟完成实例创建。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3 class="feature-title">DDoS防护</h3>
+                        <p class="feature-desc">内置高级DDoS清洗系统，有效抵御大流量攻击，确保您的业务7x24小时不间断运行。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💾</div>
+                        <h3 class="feature-title">高性价比存储</h3>
+                        <p class="feature-desc">采用NVMe SSD固态硬盘，提供高达5000MB/s的读写速度，数据读写更快速，I/O性能更强劲。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3 class="feature-title">弹性伸缩</h3>
+                        <p class="feature-desc">根据业务负载自动调整CPU和内存资源。无需重启服务器，即可平滑扩容或缩容，节省成本。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛠️</div>
+                        <h3 class="feature-title">便捷管理</h3>
+                        <p class="feature-desc">提供Web控制台、API接口及命令行工具，支持一键重置密码、快照备份、网络配置等操作。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📍</div>
+                        <h3 class="feature-title">多地域节点</h3>
+                        <p class="feature-desc">在全球多个数据中心部署，支持多可用区容灾，选择最近的地域以获得最低的延迟体验。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="section pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">灵活的价格方案</h2>
+                    <p class="section-desc">按需选择适合您业务规模的云服务器配置，无隐形消费，随时可升级。</p>
+                </div>
+                <div class="pricing-grid">
+                    <!-- Basic Plan -->
+                    <div class="pricing-card">
+                        <h3 class="plan-name">入门型</h3>
+                        <div class="plan-price">¥59<span style="font-size: 1rem; color: #666;">/月</span></div>
+                        <p class="plan-period">适合个人博客、测试环境</p>
+                        <ul class="plan-features">
+                            <li>1 vCPU 核心处理器</li>
+                            <li>1GB 内存</li>
+                            <li>25GB SSD 云硬盘</li>
+                            <li>1Mbps 带宽</li>
+                            <li>每月 2TB 流量</li>
+                        </ul>
+                        <a href="#" class="plan-btn">立即选购</a>
+                    </div>
+
+                    <!-- Pro Plan -->
+                    <div class="pricing-card popular">
+                        <div class="badge">热门推荐</div>
+                        <h3 class="plan-name">企业型</h3>
+                        <div class="plan-price">¥199<span style="font-size: 1rem; color: #666;">/月</span></div>
+                        <p class="plan-period">适合中小型网站、应用服务</p>
+                        <ul class="plan-features">
+                            <li>2 vCPU 核心处理器</li>
+                            <li>4GB 内存</li>
+                            <li>50GB SSD 云硬盘</li>
+                            <li>5Mbps 带宽</li>
+                            <li>每月 5TB 流量</li>
+                            <li>独立公网IP</li>
+                        </ul>
+                        <a href="#" class="plan-btn">立即选购</a>
+                    </div>
+
+                    <!-- Enterprise Plan -->
+                    <div class="pricing-card">
+                        <h3 class="plan-name">旗舰型</h3>
+                        <div class="plan-price">¥599<span style="font-size: 1rem; color: #666;">/月</span></div>
+                        <p class="plan-period">适合高负载业务、数据库</p>
+                        <ul class="plan-features">
+                            <li>4 vCPU 核心处理器</li>
+                            <li>8GB 内存</li>
+                            <li>100GB SSD 云硬盘</li>
+                            <li>10Mbps 带宽</li>
+                            <li>每月 10TB 流量</li>
+                            <li>独立公网IP</li>
+                            <li>优先技术支持</li>
+                        </ul>
+                        <a href="#" class="plan-btn">立即选购</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="container" style="max-width: 800px;">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题解答</h2>
+                    <p class="section-desc">关于VK服务器购买与使用，您可能关心的问题。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        购买后多久可以开通？
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>大多数配置的VK服务器在您确认订单并支付成功后，系统将自动在1-5分钟内完成环境部署并开通访问权限。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        支持退款吗？
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>我们提供7天无理由退款保障。如果在开通后的7天内对服务器性能不满意，可申请全额退款（扣除实际使用的资源费）。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        如何备份我的数据？
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>VK服务器支持创建系统快照和数据盘快照，您可以随时将当前状态保存为快照，防止误操作导致数据丢失。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        是否支持自定义镜像？
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>支持。您可以将自己配置好的系统环境打包成镜像，上传到VK服务器控制台，快速创建多个相同环境的实例。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 15px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#ccc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="#ccc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        VK服务器
+                    </div>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">
+                        致力于为全球用户提供安全、稳定、高效的云计算服务，助力数字化转型。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>产品服务</h4>
+                    <ul>
+                        <li><a href="#">云服务器 CVM</a></li>
+                        <li><a href="#">对象存储 OSS</a></li>
+                        <li><a href="#">负载均衡 SLB</a></li>
+                        <li><a href="#">CDN 加速</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助支持</h4>
+                    <ul>
+                        <li><a href="#">控制台文档</a></li>
+                        <li><a href="#">API 参考</a></li>
+                        <li><a href="#">售后工单</a></li>
+                        <li><a href="#">社区论坛</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>客服电话：400-123-4567</li>
+                        <li>工作时间：9:00 - 18:00</li>
+                        <li>邮箱：support@vkserver.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 VK服务器 版权所有. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
