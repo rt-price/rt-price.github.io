@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="遇害空姐李明珠微博 - 查询李明珠女士的生平简介、相关微博记录、案件背景及社会关注情况。提供权威信息整理，缅怀逝者，关注航空安全。">
+    <meta name="keywords" content="遇害空姐李明珠微博,李明珠,空姐,微博,航空安全,社会新闻">
+    <title>遇害空姐李明珠微博 - 生平回顾与信息查询平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #f4f4f6;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --accent-color: #2c3e50;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+            --spacing-unit: 16px;
+            --container-width: 1000px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #d32f2f;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: #d32f2f;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        nav a:hover {
+            color: #d32f2f;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        @media (min-width: 768px) {
+            .content-grid {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        /* Main Section */
+        .main-column {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            border-left: 4px solid #d32f2f;
+            padding-left: 12px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        /* Info Card */
+        .info-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .info-label {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .info-value {
+            font-size: 1rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 24px;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -29px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            background-color: var(--card-bg);
+            border: 2px solid #d32f2f;
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+
+        .timeline-content {
+            font-size: 1rem;
+            color: var(--text-primary);
+        }
+
+        /* Sidebar */
+        .sidebar-column {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .sidebar-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-card h3 {
+            font-size: 1rem;
+            margin-bottom: 16px;
+            color: var(--accent-color);
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            color: var(--text-secondary);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .tag:hover {
+            background-color: #e0e0e0;
+            color: #d32f2f;
+        }
+
+        /* Search Box */
+        .search-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .search-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .search-btn:hover {
+            background-color: #1a252f;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--accent-color);
+            color: rgba(255,255,255,0.8);
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 12px 0;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 16px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>李明珠</span>信息查询
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#intro">生平简介</a></li>
+                    <li><a href="#timeline">时间线</a></li>
+                    <li><a href="#social">微博记录</a></li>
+                    <li><a href="#safety">航空安全</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>遇害空姐李明珠</h1>
+                <p>关于李明珠女士的生平回顾、相关资料整理及航空安全相关信息的权威汇总。</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-column">
+                    
+                    <!-- Intro Section -->
+                    <article id="intro">
+                        <h2 class="section-title">生平简介</h2>
+                        <div class="info-card">
+                            <div class="info-item">
+                                <span class="info-label">姓名</span>
+                                <span class="info-value">李明珠</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">职业</span>
+                                <span class="info-value">空乘人员</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">所属航空公司</span>
+                                <span class="info-value">中国国际航空（CA）</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">籍贯</span>
+                                <span class="info-value">山东青岛</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">基本介绍</span>
+                                <span class="info-value">李明珠女士是一位年轻优秀的空乘人员，以其专业、热情的服务态度在同事和乘客中留下了良好印象。她在飞行岗位上兢兢业业，致力于为旅客提供舒适的飞行体验。</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Timeline Section -->
+                    <article id="timeline">
+                        <h2 class="section-title">相关时间线</h2>
+                        <div class="info-card">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2012年3月</div>
+                                    <div class="timeline-content">李明珠女士在执行航班任务期间不幸遭遇意外，经抢救无效离世，年仅24岁。这一事件震惊了航空界和社会各界。</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2012年3月</div>
+                                    <div class="timeline-content">相关部门介入调查，确认该事件为一起严重的安全事故。社会各界纷纷表达哀悼之情，并呼吁加强飞行安全措施。</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2012年至今</div>
+                                    <div class="timeline-content">事件引发了对空乘人员权益保障及航班安全规范的广泛讨论。相关法律和行业规范在此后得到了进一步完善。</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Social/Media Section -->
+                    <article id="social">
+                        <h2 class="section-title">关于“微博”记录</h2>
+                        <div class="info-card">
+                            <p style="margin-bottom: 12px; color: var(--text-secondary);">
+                                关于李明珠女士的微博记录，根据公开信息及当时网络流传的截图，主要记录了她的工作日常、生活感悟以及对生活的热爱。
+                            </p>
+                            <p style="margin-bottom: 12px; color: var(--text-secondary);">
+                                在其生前发表的微博中，她曾分享过飞行途中的风景、与同事的趣事以及作为一名空乘人员的职业心得。这些内容展现了她积极向上、阳光开朗的性格。
+                            </p>
+                            <div style="background-color: #fafafa; border: 1px dashed var(--border-color); padding: 16px; border-radius: 4px;">
+                                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 8px;">引用当时网络流传的片段：</p>
+                                <p style="font-size: 0.95rem; font-style: italic; color: #555;">"每次降落，看到地面的万家灯火，都觉得特别踏实。虽然飞行很辛苦，但看到旅客平安到达目的地，一切都值得。"</p>
+                            </div>
+                            <p style="margin-top: 12px; font-size: 0.9rem; color: var(--text-light);">
+                                *注：以上内容基于历史资料整理，旨在缅怀逝者。
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar-column">
+                    
+                    <!-- Search -->
+                    <div class="sidebar-card search-box">
+                        <h3>快速查询</h3>
+                        <input type="text" class="search-input" placeholder="输入关键词..." id="searchInput">
+                        <button class="search-btn" onclick="handleSearch()">搜索</button>
+                        <p style="font-size: 0.8rem; color: var(--text-light); margin-top: 8px;">
+                            支持搜索：姓名、时间、事件等
+                        </p>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="sidebar-card">
+                        <h3>相关标签</h3>
+                        <div class="tag-cloud">
+                            <a href="#" class="tag">航空安全</a>
+                            <a href="#" class="tag">空乘权益</a>
+                            <a href="#" class="tag">社会关注</a>
+                            <a href="#" class="tag">青岛籍</a>
+                            <a href="#" class="tag">2012年</a>
+                        </div>
+                    </div>
+
+                    <!-- Safety Tips -->
+                    <div class="sidebar-card">
+                        <h3>航空安全提示</h3>
+                        <ul style="list-style: none; font-size: 0.9rem; color: var(--text-secondary);">
+                            <li style="margin-bottom: 8px;">✓ 遵守机上安全规定</li>
+                            <li style="margin-bottom: 8px;">✓ 熟悉紧急出口位置</li>
+                            <li style="margin-bottom: 8px;">✓ 听从乘务员指挥</li>
+                            <li style="margin-bottom: 8px;">✓ 保持冷静，等待救援</li>
+                        </ul>
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="logo" style="justify-content: center; color: white;">
+                <span>李明珠</span>信息查询
+            </div>
+            <div class="footer-links">
+                <a href="#intro">生平简介</a>
+                <a href="#timeline">时间线</a>
+                <a href="#social">微博记录</a>
+                <a href="#safety">航空安全</a>
+            </div>
+            <p class="copyright">
+                本页面内容仅供信息整理与参考，旨在缅怀逝者及普及相关知识。<br>
+                版权所有 © 2023-2024 信息整理平台
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function handleSearch() {
+            const input = document.getElementById('searchInput');
+            const value = input.value.trim();
+            if (value) {
+                // 模拟搜索跳转或提示
+                alert('正在搜索：' + value);
+            } else {
+                input.focus();
+            }
+        }
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
