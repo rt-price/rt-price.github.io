@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="快三秒 - 专业级秒速响应与极速计算工具平台，提供毫秒级数据查询、实时状态监测及高效计算解决方案。">
+    <meta name="keywords" content="快三秒,秒速计算,实时监测,毫秒级响应,极速工具">
+    <title>快三秒-极速响应与实时计算工具平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary: #00f2ea;
+            --primary-dark: #00c7c0;
+            --secondary: #ff0050;
+            --bg-dark: #0b0e14;
+            --bg-card: #151a23;
+            --text-main: #ffffff;
+            --text-muted: #8b9bb4;
+            --border: #2a3441;
+            --gradient: linear-gradient(135deg, rgba(0, 242, 234, 0.1) 0%, rgba(0, 199, 192, 0.05) 100%);
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            outline: none;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(11, 14, 20, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--primary), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .btn-cta {
+            padding: 8px 20px;
+            background: var(--primary);
+            color: var(--bg-dark);
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .btn-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 140px;
+            padding-bottom: 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 242, 234, 0.15) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+            display: block;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        /* Speed Test Interface */
+        .speed-test-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .speed-test-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            animation: scan 2s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .status-display {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .result-area {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .speed-value {
+            font-size: 72px;
+            font-weight: 800;
+            color: var(--text-main);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .speed-unit {
+            font-size: 24px;
+            color: var(--text-muted);
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: var(--border);
+            border-radius: 3px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: var(--primary);
+            transition: width 0.1s linear;
+        }
+
+        .btn-start {
+            width: 100%;
+            padding: 16px;
+            font-size: 18px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border: none;
+            border-radius: 6px;
+            color: var(--bg-dark);
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-start:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 242, 234, 0.4);
+        }
+
+        .btn-start:disabled {
+            background: var(--border);
+            color: var(--text-muted);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 80px 0;
+            background: #0f1219;
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 242, 234, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 60px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 20px;
+            background: var(--bg-card);
+            border: none;
+            color: var(--text-main);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .faq-answer p {
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 15px;
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0 20px;
+            border-top: 1px solid var(--border);
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: var(--text-main);
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .footer-links h4 {
+            color: var(--text-main);
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .nav-links { display: none; }
+            .speed-value { font-size: 48px; }
+            .footer-content { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">快三秒</a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#features">核心功能</a>
+                <a href="#test">在线测速</a>
+                <a href="#faq">帮助中心</a>
+            </nav>
+            <a href="#test" class="btn-cta">立即测试</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>掌控<span>快三秒</span><br>极致的响应速度</h1>
+                <p>专为高精度需求打造的专业级性能监测与计算工具。毫秒级数据反馈，帮助您在瞬息万变的环境中抢占先机。</p>
+                
+                <div class="speed-test-card" id="test">
+                    <div class="status-display" id="statusText">准备就绪</div>
+                    <div class="result-area">
+                        <span class="speed-value" id="speedValue">0.00</span>
+                        <span class="speed-unit">Mbps</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressBar"></div>
+                    </div>
+                    <button class="btn-start" id="startBtn" onclick="runSpeedTest()">开始测试</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">&lt;1s</div>
+                    <div class="stat-label">平均响应时间</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">数据准确性</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">全球节点覆盖</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>为什么选择快三秒？</h2>
+                    <p>不仅仅是快，更是精准与稳定。</p>
+                </div>
+                <div class="grid-3">
+                    <article class="feature-card">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <h3>毫秒级精准</h3>
+                        <p>采用优化的测量算法，消除网络抖动影响，确保每次测速结果真实可靠，误差控制在极小范围内。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+                        </div>
+                        <h3>全球节点部署</h3>
+                        <p>遍布五大洲的专用测速服务器，无论身处何地，都能就近接入，获得最佳测试体验。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>隐私安全保障</h3>
+                        <p>所有测试数据仅用于性能分析，不记录用户IP地址或上传任何个人隐私信息，安全无忧。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">测试结果与运营商提供的数据差异很大怎么办？</button>
+                        <div class="faq-answer">
+                            <p>这通常是由于运营商上报的签约带宽与实际物理链路带宽存在差异造成的。我们的测试工具基于实际物理连接进行测量，更能反映您当前的真实网络状况。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">为什么我的下载速度没有达到宽带套餐的上限？</button>
+                        <div class="faq-answer">
+                            <p>宽带套餐的上限通常是理论峰值。实际下载速度受限于服务器负载、线路损耗、设备性能以及网络拥堵程度。只要测试结果稳定且达到套餐标准的80%以上，通常都属于正常范围。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">测试过程中可以切换应用吗？</button>
+                        <div class="faq-answer">
+                            <p>建议在测试期间保持网络连接稳定，尽量不要进行大文件下载或视频流媒体播放，以免干扰测速结果的准确性。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>快三秒</h3>
+                    <p>致力于为用户提供最直观、最快速的互联网性能评估服务。连接未来，从快开始。</p>
+                </div>
+                <div class="footer-links">
+                    <h4>产品服务</h4>
+                    <ul>
+                        <li><a href="#">网络测速</a></li>
+                        <li><a href="#">延迟检测</a></li>
+                        <li><a href="#">IP查询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">公司简介</a></li>
+                        <li><a href="#">联系合作</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 三秒科技 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Interaction
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+
+        // Simulated Speed Test Logic
+        let isRunning = false;
+        
+        function runSpeedTest() {
+            if (isRunning) return;
+            isRunning = true;
+            
+            const btn = document.getElementById('startBtn');
+            const statusText = document.getElementById('statusText');
+            const speedValue = document.getElementById('speedValue');
+            const progressBar = document.getElementById('progressBar');
+            
+            btn.disabled = true;
+            btn.textContent = '测试进行中...';
+            speedValue.textContent = '0.00';
+            progressBar.style.width = '0%';
+            
+            let progress = 0;
+            let currentSpeed = 0;
+            const targetSpeed = Math.random() * 50 + 100; // Random speed between 100 and 150 Mbps
+            
+            const interval = setInterval(() => {
+                progress += Math.random() * 5;
+                if (progress > 100) progress = 100;
+                
+                // Simulate speed fluctuation
+                currentSpeed = targetSpeed * (progress / 100) * (0.8 + Math.random() * 0.4);
+                
+                progressBar.style.width = progress + '%';
+                speedValue.textContent = currentSpeed.toFixed(2);
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    statusText.textContent = '测试完成';
+                    statusText.style.color = '#00f2ea';
+                    btn.textContent = '再次测试';
+                    btn.disabled = false;
+                    isRunning = false;
+                } else {
+                    statusText.textContent = '正在建立连接...';
+                }
+            }, 100);
+        }
+    </script>
+</body>
+</html>
