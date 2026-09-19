@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="中国白癜风专业诊疗门户，提供白癜风症状识别、科学治疗方法、预防护理指南及权威专家咨询，帮助患者了解病情、选择正规医院、走出治疗误区。">
+    <meta name="keywords" content="中国白癜风,白癜风症状,白癜风治疗,白癜风预防,白癜风医院,白癜风偏方">
+    <title>中国白癜风-科学诊疗与护理指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c7a7b;
+            --primary-light: #e6fffa;
+            --secondary-color: #2d3748;
+            --accent-color: #38b2ac;
+            --text-main: #1a202c;
+            --text-secondary: #4a5568;
+            --bg-body: #f7fafc;
+            --bg-white: #ffffff;
+            --spacing-unit: 1rem;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            background-color: #234e52;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #fff 100%);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.6rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-light);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+        }
+
+        /* Symptoms Grid */
+        .symptoms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .symptom-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .symptom-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .symptom-card h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .symptom-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* Treatment Section */
+        .treatment-section {
+            background-color: var(--bg-white);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 4rem;
+        }
+
+        .treatment-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .step-item {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1.5rem;
+        }
+
+        .step-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Prevention Tips */
+        .tips-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .tip-card {
+            flex: 1 1 300px;
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .tip-card h3 {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tip-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .tip-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -0.5rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--primary-light);
+            padding: 3rem 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 4rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+        }
+
+        .faq-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .faq-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 4rem 1rem 2rem;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col ul li a {
+            color: #a0aec0;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .disclaimer {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #a0aec0;
+            font-size: 0.85rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .treatment-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            医路无忧<span>网</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#symptoms">症状识别</a></li>
+                <li><a href="#treatment">科学治疗</a></li>
+                <li><a href="#prevention">预防护理</a></li>
+                <li><a href="#faq">常见问答</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="cta-button">在线咨询</a>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>关注中国白癜风<br>科学诊疗与护理指南</h1>
+            <p>白癜风并非绝症，通过规范治疗与科学护理，多数患者可显著改善症状。我们致力于为您提供权威的医学资讯与康复指导。</p>
+            <div class="hero-buttons">
+                <a href="#treatment" class="cta-button">了解治疗方法</a>
+                <a href="#symptoms" class="btn-outline">自查症状</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div id="symptoms" class="section-title">
+            <h2>常见症状识别</h2>
+            <p>早期发现是治疗的关键，请留意身体皮肤的变化</p>
+        </div>
+
+        <section class="symptoms-grid">
+            <article class="symptom-card">
+                <div class="icon-box">⚪</div>
+                <h3>皮肤白斑</h3>
+                <p>这是最典型的症状。白斑通常呈乳白色或瓷白色，形状不规则，边界清晰，且白斑处皮肤感觉正常，无瘙痒或脱屑。</p>
+            </article>
+            <article class="symptom-card">
+                <div class="icon-box">☀️</div>
+                <h3>对紫外线敏感</h3>
+                <p>患有白癜风的皮肤对阳光中的紫外线非常敏感。暴晒后，白斑区域可能会出现红斑、灼痛甚至水疱。</p>
+            </article>
+            <article class="symptom-card">
+                <div class="icon-box">✋</div>
+                <h3>毛发变白</h3>
+                <p>如果白斑部位伴有毛发，毛发可能会变白。这在头部白癜风中较为常见，也被称为“白发白癜风”。</p>
+            </article>
+            <article class="symptom-card">
+                <div class="icon-box">🔍</div>
+                <h3>无自觉症状</h3>
+                <p>绝大多数白癜风患者初期没有明显的疼痛、瘙痒或不适感，往往在照镜子或无意中发现皮肤变白。</p>
+            </article>
+        </section>
+
+        <div id="treatment" class="section-title">
+            <h2>科学治疗路径</h2>
+            <p>白癜风的治疗需要个性化方案，切勿盲目跟风偏方</p>
+        </div>
+
+        <section class="treatment-section">
+            <div class="treatment-steps">
+                <div class="step-item">
+                    <h3>1. 精准分型分期</h3>
+                    <p>白癜风分为进展期和稳定期。进展期白斑会扩大，稳定期则相对静止。治疗方案需根据分期分型制定，进展期以控制扩散为主。</p>
+                </div>
+                <div class="step-item">
+                    <h3>2. 光疗与药物治疗</h3>
+                    <p>常见的手段包括308准分子激光、窄谱中波紫外线（NB-UVB）照射，以及外用糖皮质激素或钙调神经磷酸酶抑制剂。</p>
+                </div>
+                <div class="step-item">
+                    <h3>3. 中医辅助调理</h3>
+                    <p>中医认为白癜风与气血不和有关，可通过中药内服或外洗进行整体调理，增强免疫力，辅助白斑复色。</p>
+                </div>
+                <div class="step-item">
+                    <h3>4. 手术移植治疗</h3>
+                    <p>对于稳定期且面积较小的白斑，可采用自体表皮移植手术，快速恢复皮肤色泽。</p>
+                </div>
+            </div>
+        </section>
+
+        <div id="prevention" class="section-title">
+            <h2>日常预防与护理</h2>
+            <p>良好的生活习惯能有效降低复发风险</p>
+        </div>
+
+        <section class="tips-container">
+            <div class="tip-card">
+                <h3>🛡️ 防晒保护</h3>
+                <ul class="tip-list">
+                    <li>避免长时间暴晒，外出时涂抹防晒霜。</li>
+                    <li>穿着长袖衣物，使用遮阳伞。</li>
+                    <li>减少化学物质（如染发剂、漂白剂）接触皮肤。</li>
+                </ul>
+            </div>
+            <div class="tip-card">
+                <h3>🥗 营养均衡</h3>
+                <ul class="tip-list">
+                    <li>多摄入富含酪氨酸和矿物质的食物。</li>
+                    <li>少吃富含维生素C的水果和蔬菜，适量摄入富含铜、锌的食物。</li>
+                    <li>戒烟限酒，保持规律作息。</li>
+                </ul>
+            </div>
+            <div class="tip-card">
+                <h3>😌 心理调节</h3>
+                <ul class="tip-list">
+                    <li>保持乐观心态，避免精神紧张和焦虑。</li>
+                    <li>避免外伤、摩擦和压迫，防止同形反应。</li>
+                    <li>建立战胜疾病的信心，配合医生治疗。</li>
+                </ul>
+            </div>
+        </section>
+
+        <div id="faq" class="section-title">
+            <h2>常见问题解答</h2>
+            <p>解答您关于中国白癜风治疗与护理的疑惑</p>
+        </div>
+
+        <section class="faq-section">
+            <div class="faq-item">
+                <h3>白癜风能彻底治愈吗？</h3>
+                <p>白癜风的治疗难度因人而异。早期、局限型白癜风治愈率较高；晚期或泛发型白癜风治疗周期较长，但通过综合治疗仍可获得显著改善。</p>
+            </div>
+            <div class="faq-item">
+                <h3>偏方治疗有效吗？</h3>
+                <p>目前医学界公认的科学治疗方法是光疗、药物和手术。民间流传的偏方大多缺乏科学依据，甚至可能因为刺激性成分导致白斑扩散，建议务必到正规医院就诊。</p>
+            </div>
+            <div class="faq-item">
+                <h3>白癜风会传染给家人吗？</h3>
+                <p>白癜风不是传染病，不会通过接触传染给家人或朋友。它是由于自身免疫系统攻击黑色素细胞引起的。</p>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>关于我们</h4>
+            <p style="color: #a0aec0; font-size: 0.9rem;">本站致力于提供专业、客观的白癜风医学资讯与康复指导，帮助患者建立正确的治疗观念，科学管理病情。</p>
+        </div>
+        <div class="footer-col">
+            <h4>快速导航</h4>
+            <ul>
+                <li><a href="#">症状自查</a></li>
+                <li><a href="#">治疗方法</a></li>
+                <li><a href="#">医院推荐</a></li>
+                <li><a href="#">患者故事</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>免责声明</h4>
+            <ul>
+                <li><a href="#">隐私政策</a></li>
+                <li><a href="#">服务条款</a></li>
+                <li><a href="#">健康声明</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="disclaimer">
+        <p>免责声明：本网站内容仅供参考，不能替代专业医疗建议、诊断或治疗。如有身体不适，请及时就医。对于因使用本网站内容而产生的任何后果，本网站不承担责任。</p>
+        <p>&copy; 2023 医路无忧网 版权所有</p>
+    </div>
+</footer>
+
+</body>
+</html>
